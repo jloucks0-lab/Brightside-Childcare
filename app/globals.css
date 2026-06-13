@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette: "morning at the playground" */
+  --color-cloud: #fffdf6;      /* warm paper-white background */
+  --color-pine: #21433c;       /* deep pine ink — text */
+  --color-pine-soft: #3f6159;  /* secondary text */
+  --color-sun: #ffc53d;        /* sunshine yellow — primary accent */
+  --color-sun-deep: #f5a623;   /* sun shadow / hover */
+  --color-coral: #ff7a59;      /* coral — secondary accent, CTAs */
+  --color-coral-deep: #e85f3d;
+  --color-sky: #bde3f0;        /* pale sky panels */
+  --color-sky-deep: #57aecf;
+  --color-sage: #e8f2e0;       /* soft grass panels */
+  --color-sand: #fdf3dc;       /* sun-washed card background */
+
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --radius-blob: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cloud);
+  color: var(--color-pine);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Gentle float for the hero sun */
+@keyframes rise {
+  from { transform: translateY(14px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.animate-rise { animation: rise 0.9s ease-out both; }
+.animate-rise-delay { animation: rise 0.9s ease-out 0.15s both; }
+
+/* Visible keyboard focus */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--color-sky-deep);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
