@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import SunMark from "./SunMark";
+import { brightwheel } from "@/lib/brightwheel";
 
 const links = [
   { href: "/locations/fairport", label: "Brightside Childcare" },
@@ -41,6 +42,15 @@ export default function Header() {
               )}
             </Link>
           ))}
+          <a
+            href={brightwheel.parentLoginUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-pine-soft hover:text-pine transition-colors"
+            title="Sign in to brightwheel"
+          >
+            Family login
+          </a>
           <Link
             href="/enroll"
             className="bg-coral hover:bg-coral-deep text-white font-display font-bold text-sm rounded-full px-4 py-2 transition-colors"
@@ -82,6 +92,15 @@ export default function Header() {
               )}
             </Link>
           ))}
+          <a
+            href={brightwheel.parentLoginUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="py-2 font-semibold text-pine-soft"
+          >
+            Family login (brightwheel)
+          </a>
           <Link
             href="/enroll"
             onClick={() => setOpen(false)}

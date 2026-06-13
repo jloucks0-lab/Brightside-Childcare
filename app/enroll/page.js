@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import EnrollForm from "@/components/EnrollForm";
+import BrightwheelCta from "@/components/BrightwheelCta";
 
 export const metadata = {
   title: "Enroll Your Child",
@@ -38,8 +39,19 @@ export default function EnrollPage() {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <EnrollForm />
+        <div className="max-w-3xl mx-auto space-y-10">
+          <BrightwheelCta />
+
+          <div>
+            <h2 className="font-display font-extrabold text-2xl">
+              Or send a quick inquiry
+            </h2>
+            <p className="mt-1 mb-6 text-sm text-pine-soft font-semibold">
+              Not ready to apply, or just have questions about openings and schedules?
+              This goes straight to our director.
+            </p>
+            <EnrollForm />
+          </div>
         </div>
       </section>
     </>

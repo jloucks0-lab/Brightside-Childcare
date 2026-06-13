@@ -47,6 +47,25 @@ production. To deliver real emails:
      land in spam.
 3. Redeploy.
 
+## Brightwheel integration
+
+Brightwheel has no public API, so the integration is link-based — and everything is
+configured in **one file: `lib/brightwheel.js`**.
+
+Already live (official brightwheel URLs, no setup needed):
+- "Family login" in the header and footer → brightwheel web sign-in
+- App download links (iPhone / Android) in the footer's "Current families" section
+
+Needs URLs from the brightwheel admin account (paste into `lib/brightwheel.js`):
+- `enrollFormUrl` — the new-family interest/registration form. In brightwheel:
+  Paperwork → form → set Access Level to **Link Access** → copy URL. Submissions
+  auto-create a "Prospect" student in the admissions pipeline. Until set, the
+  enroll page shows a "launching soon" note and relies on the built-in inquiry form.
+- `enrollFormUrlEast` — optional separate form for Brightside East
+- `admissionsPacketUrl` — optional full admissions packet link
+- Event RSVPs — create a Sign-up in brightwheel, share via URL, paste as
+  `signupUrl` on any event in `app/events/page.js`
+
 ## TODO before launch — placeholders to replace
 
 Search the codebase for `TODO`:

@@ -6,7 +6,9 @@ export const metadata = {
 };
 
 /* TODO: Update this list as events are scheduled. Each event needs:
-   date, title, location, and a short description. */
+   date, title, location, and a short description.
+   Optional: a brightwheel Sign-up link — create the Sign-up in brightwheel,
+   choose "share via URL", and paste it as `signupUrl` to show an RSVP button. */
 const upcoming = [
   {
     date: "Coming soon",
@@ -14,18 +16,21 @@ const upcoming = [
     location: "Brightside Childcare East",
     blurb:
       "Tour our brand-new classrooms, meet the founding teachers, and learn about openings. Date to be announced — follow us on Facebook for the announcement.",
+    signupUrl: null,
   },
   {
     date: "June",
     title: "Donuts with Dad",
     location: "Both locations",
     blurb: "A Father's Day morning treat — dads, grandpas, and special guests welcome before work.",
+    signupUrl: null,
   },
   {
     date: "August",
     title: "End-of-summer family picnic",
     location: "Brightside Childcare · Fairport",
     blurb: "Games on the lawn, popsicles, and a chance for Brightside families to meet each other.",
+    signupUrl: null,
   },
 ];
 
@@ -71,6 +76,16 @@ export default function EventsPage() {
                 <h3 className="font-display font-bold text-xl">{e.title}</h3>
                 <p className="text-xs font-bold uppercase tracking-wide text-pine-soft mt-0.5">{e.location}</p>
                 <p className="mt-2 text-sm text-pine-soft leading-relaxed">{e.blurb}</p>
+                {e.signupUrl && (
+                  <a
+                    href={e.signupUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block bg-coral hover:bg-coral-deep text-white font-display font-bold text-sm rounded-full px-5 py-2 transition-colors"
+                  >
+                    RSVP on brightwheel
+                  </a>
+                )}
               </div>
             </article>
           ))}
