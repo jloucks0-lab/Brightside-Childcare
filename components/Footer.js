@@ -37,8 +37,16 @@ export default function Footer() {
               <strong>Brightside Childcare East</strong>{" "}
               <span className="text-coral font-bold">— now open!</span>
               <br />
-              {/* TODO: replace with East street address */}
-              Fairport / Macedon area, NY
+              1045 Brixton Drive
+              <br />
+              Macedon, NY
+              <br />
+              <a
+                href="mailto:director@brightsidechildcareeast.com"
+                className="underline decoration-sun/60 hover:decoration-sun break-all"
+              >
+                director@brightsidechildcareeast.com
+              </a>
               <br />
               <Link href="/locations/east" className="underline decoration-sun/60 hover:decoration-sun">
                 Learn more →

@@ -70,9 +70,9 @@ Needs URLs from the brightwheel admin account (paste into `lib/brightwheel.js`):
 
 Search the codebase for `TODO`:
 
-- **Brightside East address, phone, and hours** — `components/Footer.js`,
-  `app/locations/east/page.js`, `app/contact/page.js`. Currently described as
-  "east of Fairport village" pending the confirmed street address.
+- **Brightside East hours** — not yet listed anywhere; add when confirmed.
+  (Address, email, and programs are now live: 1045 Brixton Drive, Macedon, NY ·
+  director@brightsidechildcareeast.com)
 - **Operating hours** for the original location — `app/locations/fairport/page.js`.
 - **Teacher names, bios, and photos** — `app/teachers/page.js` (Julie Estabrook is real;
   the rest are placeholder cards). Drop photos in `public/teachers/`.
@@ -92,3 +92,6 @@ Search the codebase for `TODO`:
 - Mission: "a safe and nurturing environment for children to learn and explore"
 - Facebook: https://www.facebook.com/p/Brightside-Childcare-100090215379767/
 - Brightside Childcare East LLC formed October 2025; announced as "now enrolling"
+- Brightside East: 1045 Brixton Drive, Macedon, NY · director@brightsidechildcareeast.com ·
+  newly renovated · programs: infants, toddlers, preschool, UPK wrap-around,
+  before/after school, school & summer breaks

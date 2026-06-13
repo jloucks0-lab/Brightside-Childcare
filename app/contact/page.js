@@ -38,8 +38,19 @@ export default function ContactPage() {
             <h2 className="font-display font-bold text-lg mb-2">
               Brightside Childcare East <span className="text-coral-deep">· New!</span>
             </h2>
-            {/* TODO: replace with East address & phone */}
-            <p>Serving families east of Fairport village — contact us for the address and a tour of the new space.</p>
+            <p>
+              1045 Brixton Drive
+              <br />
+              Macedon, NY
+            </p>
+            <p className="mt-2">
+              <a
+                href="mailto:director@brightsidechildcareeast.com"
+                className="font-bold underline decoration-coral/60 hover:decoration-coral break-all"
+              >
+                director@brightsidechildcareeast.com
+              </a>
+            </p>
           </div>
           <div className="rounded-blob bg-sage p-6 text-sm">
             <h2 className="font-display font-bold text-lg mb-2">Email &amp; social</h2>

@@ -119,9 +119,9 @@ export default function Home() {
               Our newest location
             </p>
             <p className="mt-3 text-sky leading-relaxed flex-1">
-              Everything families love about Brightside, in a brand-new space east of the
-              village. Spots are filling fast for our opening classrooms — come take a look
-              before they&apos;re gone.
+              Everything families love about Brightside, in a newly renovated space at 1045
+              Brixton Drive in Macedon — with infant through school-age care, UPK wrap-around,
+              and before/after school. Spots are filling fast, so come take a look.
             </p>
             <Link
               href="/locations/east"
